@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/CSS/TableSearchStyle.css">
+</head>
+<body>
+
+    <span id="RightArrow" class="navbar-arrow" onclick="closeNavBar()">
+      <i class="fas fa-arrow-left"></i>      
+    </span>
+
+    <span id="DownArrow" class="navbar-arrow" onclick="showNavBar()">
+      <i class="fas fa-arrow-down"></i>      
+    </span>
+
+
+    <div id="Confirmation" class="confirmation">
+      <div id="ConfirmBoxCross" class="confirmBoxCross">
+        <i class="fas fa-times"></i>
+      </div>
+      <div id="ConfirmBox" class="confirmBox">
+        Do you want to delete this?
+        <br><br>
+        <input class="del-button" type="button" value="Delete" onclick="Del_Confirm_Yes()">
+        <input class="no-button" type="button" value="No" onclick="Del_Confirm_No()">     
+      </div>
+    </div>
+
+
+    <div class="Container">
+
+      <div id="NavLeft" class="nav-left">
+            
+        <div class="profile-pic-block" >
+          <div>
+            <i class="fas fa-times"></i>
+          </div>
+          
+            <img src="assets/Images/nuton-pic.jpeg" alt="User's Picture">
+          
+          <span >
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="left-nav-user-name">
+          Muhammad Ahmad Mansoor
+        <br>
+          <span class="left-nav-user-description">Muhammad Ahmad Mansoor</span>
+        </div>
+        <div class="left-nav-progress-bar-grid">
+          <div class="left-nav-bar-background">
+            <div  class="left-nav-bar-front"></div>
+          </div>
+          <div class="left-nav-profile-comp-percentage">60%</div>
+        </div>
+        <div class="left-nav-profile-comp-status">Profile Completion</div>
+    
+        <div >
+          <ul class="left-nav-menu-list">
+            <li >
+              <a>Profile</a>
+            </li>
+            <li >
+              <a>Your Answer</a>
+            </li>
+            <li >
+              <a>Your Questions</a>
+            </li>
+            <li>
+              <a>Quizzez</a>
+            </li>
+            <li>
+              <a>Questions you are following</a>
+            </li>
+            <li>
+              <a>Saved Questions</a>
+            </li>
+            <li >
+              <a>Edits</a>
+            </li>
+            <li class="left-nav-menu-list-nmbr8">
+              <a class="item8">Saved Tags</a>
+            </li>
+            <li>
+              <a>Settings</a>
+            </li>
+
+          </ul>
+        </div>				
+      
+      </div>
+
+
+      <div id="InnerContainer" class="innerContainer">
+        <div>
+            <h2>Search Result</h2>
+        </div>
+
+        <form>
+            <span>
+                <label for="course">Course</label><br>
+                <input type="text" id="course" placeholder="   course">
+            </span>
+            <span>
+                <label for="batch">Batch</label><br>
+                <select id="batch">
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                </select>
+            </span>
+            <span>
+              <label for="semester">Semester</label><br>
+              <select id="semester">
+                  <option>Fall</option>
+                  <option>Spring</option>
+                  <option>Summer</option>
+              </select>
+            </span>
+            <span>
+                <label for="dep">Department</label><br>
+                <select id="dep">
+                    <option>Computer Science</option>
+                    <option>Electrical Engineering</option>
+                    <option>Business & Accounting</option>
+                    <option>Civil Engineering</option>
+                </select>
+            </span>
+            <input type="submit" value="Search" class="submit-button" >
+            <input type="reset" value="Reset" class="reset-button">
+        </form>
+        <hr />
+        <div>
+          <table>
+            <tr>
+              <th>Course Code</th>
+              <th> Course Name</th>
+              <th>Batch</th>
+              <th>Department</th>
+              <th>Semester</th>
+              <th>Exam date</th>
+              <th>Total Marks</th>
+              <th>Actions</th>
+            </tr>
+            <tr>
+              <td>cs101</td>
+              <td>Data Structure</td>
+              <td>2016</td>
+              <td>CS</td>
+              <td>5th</td>
+              <td>Exam date</td>
+              <td>Total Marks</td>
+              <td>
+                <span id="Edit-1" class="icons" onclick="edit()"><i class="fas fa-pencil-alt"></i></span>
+                <span id="DEL-1" class="icons" onclick="DEL()"><i class="fas fa-trash-alt"></i></span>
+              </td>
+            </tr>
+            <tr>
+              <td>cs101</td>
+              <td>Data Structure</td>
+              <td>2016</td>
+              <td>CS</td>
+              <td>5th</td>
+              <td>Exam date</td>
+              <td>Total Marks</td>
+              <td>
+                <span id="Edit-1" class="icons"><i class="fas fa-pencil-alt"></i></span>
+                <span id="DEL-1" class="icons" onclick="DEL()"><i class="fas fa-trash-alt"></i></span>
+              </td>
+            </tr>
+            <tr>
+              <td>cs101</td>
+              <td>Data Structure</td>
+              <td>2016</td>
+              <td>CS</td>
+              <td>5th</td>
+              <td>Exam date</td>
+              <td>Total Marks</td>
+              <td>
+                <span class="icons"><i class="fas fa-pencil-alt"></i></span>
+                <span class="icons" onclick="DEL()"><i class="fas fa-trash-alt"></i></span>
+              </td>
+            </tr>
+            <tr>
+              <td>cs101</td>
+              <td>Data Structure</td>
+              <td>2016</td>
+              <td>CS</td>
+              <td>5th</td>
+              <td>Exam date</td>
+              <td>Total Marks</td>
+              <td>
+                <span class="icons"><i class="fas fa-pencil-alt"></i></span>
+                <span class="icons" onclick="DEL()"><i class="fas fa-trash-alt"></i></span>
+              </td>
+            </tr>
+            <tr>
+              <td>cs101</td>
+              <td>Data Structure</td>
+              <td>2016</td>
+              <td>CS</td>
+              <td>5th</td>
+              <td>Exam date</td>
+              <td>Total Marks</td>
+              <td>
+                <span class="icons"><i class="fas fa-pencil-alt"></i></span>
+                <span class="icons" onclick="DEL()"><i class="fas fa-trash-alt"></i></span>
+              </td>
+            </tr>
+            <tr>
+              <td>cs101</td>
+              <td>Data Structure</td>
+              <td>2016</td>
+              <td>CS</td>
+              <td>5th</td>
+              <td>Exam date</td>
+              <td>Total Marks</td>
+              <td>
+                <span class="icons" ><i class="fas fa-pencil-alt"></i></span>
+                <span class="icons" onclick="DEL()"><i class="fas fa-trash-alt"></i></span>
+              </td>
+            </tr>           
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <footer >
+      <div class="Dekstop-foter-menu">
+        <div class="foter-col1">
+          
+            <h2>Nuton</h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+              Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+              sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+            </p>
+        </div>  
+        <div class="foter-col2"> 
+          <h4>Sitemap</h4>
+          <ul>
+            <li>
+              <a>Home</a>
+            </li>
+            <li>
+              <a>About us</a>
+            </li>
+            <li>
+              <a>Blog</a>
+            </li>
+            <li>
+              <a>News</a>
+            </li>
+            <li>
+              <a>Event</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="foter-col3">
+          <div class="foter-col-3">
+            <ul >
+              <li>
+                <a>Gallery</a>
+              </li>
+              <li>
+                <a>News</a>
+              </li>
+              <li>
+                <a>Talent</a>
+              </li>
+              <li>
+                <a>Support</a>
+              </li>
+              <li>
+                <a>Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="foter-col4">
+          <h4>Support</h4>
+          <ul>
+            <li>
+              <a>FAQs</a>
+            </li>
+            <li>
+              <a>Privacy</a>
+            </li>
+            <li>
+              <a>Policy</a>
+            </li>
+            <li>
+              <a>Support</a>
+            </li>
+            <li>
+              <a>Documentation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="Mobile-foter-menu">
+        <div>
+          <a>About us</a>
+        </div>
+        <div>
+          <a>Blog</a>
+        </div>
+        <div>
+          <a>Support</a>
+        </div>
+        <div>
+          <a>FAQs</a>
+        </div>
+        <div>
+          <a>Privacy</a>
+        </div>
+        <div>
+          <a>Policy</a>
+        </div>
+        <div>
+          <a>Contact</a>
+        </div>
+      </div>
+       
+      <div class="foter-copyright">
+        copyrights
+      </div>
+    </footer>
+      
+    <script src="assets/JS/TableSearch.js"></script>
+</body>
+</html>

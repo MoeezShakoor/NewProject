@@ -1,0 +1,53 @@
+.center{
+    text-align:center;
+    
+}
+.right{
+    text-align: right;
+}
+form{
+    background-color: wheat;
+}
+.heading{
+    
+    text-align:center;
+    color: saddlebrown;
+    text-decoration: underline saddlebrown solid;
+    text-shadow: 1px 1px 4px grey;
+    font-family: 'Viaoda Libre', cursive;
+}
+#table1{
+    margin: 15px auto;
+    border: 2px solid sienna;
+    width: 70% ;
+}
+.tablec1{
+    text-align: right; 
+}
+.tablec2{
+    padding-left: 20%; 
+}
+#table2{
+    margin: 15px auto; 
+    width: 70% ;
+}
+.inputTxtBack{
+    background-color: #FFFFE0;
+}
+.box{
+   padding: 8px;
+   width: 85%;
+    
+    margin: 20px auto ;
+    border: 5px solid brown;
+    overflow: auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 10px grey;
+    column-count: 2;
+    
+      
+}
+.text{
+    font-size: 17px;
+    font-family: Times New Roman, Times, serif;
+}

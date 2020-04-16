@@ -1,0 +1,450 @@
+body {
+  background-color: #e7e7e7;
+  color: black;
+  position: relative; }
+  body span.navbar-arrow {
+    position: absolute;
+    color: white;
+    background-color: green;
+    padding-left: 11px;
+    padding-top: 7px;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    left: 10px;
+    top: 20px;
+    visibility: hidden; }
+    @media screen and (max-width: 1150px) {
+      body span.navbar-arrow {
+        visibility: visible; } }
+    @media screen and (min-width: 1150px) {
+      body span.navbar-arrow {
+        visibility: hidden; } }
+  body .confirmation {
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(139, 139, 139, 0.6);
+    height: 340px;
+    width: 100%;
+    padding-top: 4%; }
+    body .confirmation .confirmBoxCross {
+      background-color: #ecf4f8;
+      width: 430px;
+      height: 30px;
+      border-radius: 5px 5px 0px 0px;
+      border: 1px solid green;
+      font-size: 17px;
+      border-bottom: none;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 36%;
+      margin-right: auto; }
+      body .confirmation .confirmBoxCross i {
+        float: right;
+        padding-top: 6px;
+        padding-left: 0px;
+        padding-right: 9px;
+        padding-bottom: 0px; }
+      @media screen and (max-width: 1100px) {
+        body .confirmation .confirmBoxCross {
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: 24%;
+          margin-right: auto; } }
+      @media screen and (max-width: 600px) {
+        body .confirmation .confirmBoxCross {
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: 13%;
+          margin-right: auto; } }
+    body .confirmation .confirmBox {
+      background-color: #fffdfd;
+      width: 430px;
+      height: 140px;
+      border-radius: 0px 0px 5px 5px;
+      box-shadow: 10px 10px 10px gray;
+      border: 1px solid green;
+      font-size: 17px;
+      border-top: 1px solid #e0dddd;
+      padding-top: 15px;
+      padding-left: 16px;
+      padding-right: auto;
+      padding-bottom: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 36%;
+      margin-right: auto; }
+      body .confirmation .confirmBox .del-button {
+        background-color: green;
+        color: white;
+        font-size: 20px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 10px;
+        width: 110px;
+        height: 40px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+        margin-left: 150px;
+        margin-right: 10px; }
+      body .confirmation .confirmBox .no-button {
+        background-color: white;
+        color: green;
+        font-size: 20px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 10px;
+        width: 110px;
+        height: 40px; }
+      @media screen and (max-width: 1100px) {
+        body .confirmation .confirmBox {
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: 24%;
+          margin-right: auto; } }
+      @media screen and (max-width: 600px) {
+        body .confirmation .confirmBox {
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: 13%;
+          margin-right: auto; } }
+    @media screen and (max-width: 600px) {
+      body .confirmation {
+        height: 260px; } }
+  body .Container {
+    display: flex; }
+    body .Container .nav-left {
+      background-color: white;
+      box-shadow: 10px 10px 10px darkgray;
+      border-radius: 5px;
+      display: inline-block;
+      width: 22%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px; }
+      body .Container .nav-left .profile-pic-block {
+        position: relative; }
+        body .Container .nav-left .profile-pic-block div {
+          position: absolute;
+          left: 195px;
+          top: 30px; }
+          @media screen and (max-width: 1140px) {
+            body .Container .nav-left .profile-pic-block div {
+              left: 298px; } }
+          @media screen and (min-width: 1500px) {
+            body .Container .nav-left .profile-pic-block div {
+              left: 218px; } }
+        body .Container .nav-left .profile-pic-block img {
+          height: 110px;
+          width: 110px;
+          border-radius: 60px;
+          left: 90px;
+          top: 30px;
+          position: absolute; }
+          @media screen and (max-width: 1140px) {
+            body .Container .nav-left .profile-pic-block img {
+              left: 200px; } }
+          @media screen and (min-width: 1500px) {
+            body .Container .nav-left .profile-pic-block img {
+              left: 120px; } }
+        body .Container .nav-left .profile-pic-block span {
+          position: absolute;
+          color: white;
+          background-color: green;
+          padding-left: 2px;
+          border-radius: 50%;
+          height: 18px;
+          width: 18px;
+          left: 186px;
+          top: 115px; }
+          @media screen and (max-width: 1140px) {
+            body .Container .nav-left .profile-pic-block span {
+              left: 296px; } }
+          @media screen and (min-width: 1500px) {
+            body .Container .nav-left .profile-pic-block span {
+              left: 216px; } }
+      body .Container .nav-left .left-nav-user-name {
+        padding-top: 155px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        font-size: 16px; }
+        body .Container .nav-left .left-nav-user-name .left-nav-user-description {
+          font-size: 12px;
+          font-family: initial;
+          color: gray;
+          text-align: center; }
+      body .Container .nav-left .left-nav-progress-bar-grid .left-nav-bar-background {
+        width: 85%;
+        height: 5px;
+        background-color: lightgray;
+        margin-top: 18px;
+        margin-left: 8%;
+        border-radius: 10px; }
+        body .Container .nav-left .left-nav-progress-bar-grid .left-nav-bar-background .left-nav-bar-front {
+          width: 60%;
+          height: 5px;
+          background-color: green;
+          border-radius: 10px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px; }
+      body .Container .nav-left .left-nav-progress-bar-grid .left-nav-profile-comp-percentage {
+        color: green;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        margin-left: 8%;
+        margin-right: 0px; }
+      body .Container .nav-left .left-nav-profile-comp-status {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        margin-left: 9%;
+        margin-right: 0px; }
+      body .Container .nav-left div .left-nav-menu-list {
+        padding-left: 0;
+        list-style-type: none; }
+        body .Container .nav-left div .left-nav-menu-list li {
+          width: inherit;
+          text-align: left;
+          height: 50px;
+          padding-left: 11%;
+          padding-top: 5%;
+          font-size: 18px;
+          border-bottom: 1px solid #b8b5b5; }
+          body .Container .nav-left div .left-nav-menu-list li a {
+            color: #646464;
+            text-decoration: none;
+            cursor: pointer; }
+        body .Container .nav-left div .left-nav-menu-list .left-nav-menu-list-nmbr8 {
+          background-color: lightgray; }
+          body .Container .nav-left div .left-nav-menu-list .left-nav-menu-list-nmbr8 .item8 {
+            color: green;
+            text-decoration: none; }
+      @media screen and (max-width: 1150px) {
+        body .Container .nav-left {
+          visibility: hidden;
+          width: 0px;
+          height: 0px; } }
+    body .Container .innerContainer {
+      display: inline-block;
+      width: 74%;
+      background-color: white;
+      box-shadow: 10px 10px 10px darkgray;
+      border-radius: 5px;
+      padding-top: 0px;
+      padding-left: 0px;
+      padding-right: 10px;
+      padding-bottom: 0px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px; }
+      body .Container .innerContainer h2 {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px; }
+      body .Container .innerContainer form {
+        padding-top: 0px;
+        padding-left: 25px;
+        padding-right: 10px;
+        padding-bottom: 20px; }
+        body .Container .innerContainer form label {
+          margin-top: 15px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px; }
+        body .Container .innerContainer form span {
+          display: inline-block;
+          width: 24%;
+          height: auto;
+          padding-top: 0px;
+          padding-left: 0px;
+          padding-right: 10px;
+          padding-bottom: 0px; }
+          @media (max-width: 900px) {
+            body .Container .innerContainer form span {
+              width: 49%;
+              height: auto; } }
+          @media (max-width: 575px) {
+            body .Container .innerContainer form span {
+              width: 100%;
+              height: auto; } }
+        body .Container .innerContainer form select, body .Container .innerContainer form input {
+          width: 96%;
+          height: 40px;
+          border: 1px solid #0d970d;
+          border-radius: 4px;
+          margin-top: 6px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px; }
+        body .Container .innerContainer form .submit-button, body .Container .innerContainer form .reset-button {
+          background-color: green;
+          color: white;
+          font-size: 20px;
+          margin-top: 25px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 10px;
+          width: 110px;
+          height: 40px; }
+        body .Container .innerContainer form .reset-button {
+          background-color: white;
+          color: green; }
+      body .Container .innerContainer div {
+        width: 96%;
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: auto; }
+        body .Container .innerContainer div table {
+          border: 1px solid lightgray;
+          width: 100%;
+          height: auto;
+          font-size: 16px; }
+          body .Container .innerContainer div table th {
+            padding-top: auto;
+            padding-left: 15px;
+            padding-right: auto;
+            padding-bottom: auto;
+            width: auto;
+            height: auto;
+            border: 1px solid lightgray; }
+          body .Container .innerContainer div table tr {
+            padding-top: auto;
+            padding-left: 15px;
+            padding-right: auto;
+            padding-bottom: auto;
+            width: auto;
+            height: 50px;
+            border: 1px solid lightgray; }
+            body .Container .innerContainer div table tr td {
+              padding-top: auto;
+              padding-left: 15px;
+              padding-right: auto;
+              padding-bottom: auto;
+              border: 1px solid lightgray;
+              width: auto;
+              height: auto; }
+              body .Container .innerContainer div table tr td .icons {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background: #f7f1e8;
+                padding-left: 8px;
+                padding-top: 5px;
+                border-radius: 50%;
+                margin-right: 7%; }
+      @media screen and (max-width: 1150px) {
+        body .Container .innerContainer {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 44px;
+          margin-right: auto;
+          width: 88%; } }
+  body footer {
+    background-color: green; }
+    body footer .Dekstop-foter-menu {
+      width: 80%;
+      height: auto;
+      margin-top: 20px;
+      margin-bottom: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-template-columns: 40% 20% 20% 20%;
+      grid-template-rows: 300px; }
+      body footer .Dekstop-foter-menu .foter-col1, body footer .Dekstop-foter-menu .foter-col2, body footer .Dekstop-foter-menu .foter-col3, body footer .Dekstop-foter-menu .foter-col4 {
+        color: white;
+        text-align: left;
+        padding-top: 50px;
+        padding-left: 10%;
+        padding-right: auto;
+        padding-bottom: auto; }
+      body footer .Dekstop-foter-menu .foter-col2, body footer .Dekstop-foter-menu .foter-col3, body footer .Dekstop-foter-menu .foter-col4 {
+        padding-top: 50px;
+        padding-left: 15%;
+        padding-right: auto;
+        padding-bottom: auto; }
+        body footer .Dekstop-foter-menu .foter-col2 ul, body footer .Dekstop-foter-menu .foter-col3 ul, body footer .Dekstop-foter-menu .foter-col4 ul {
+          list-style-type: none;
+          padding-top: auto;
+          padding-left: 0px;
+          padding-right: auto;
+          padding-bottom: auto; }
+        body footer .Dekstop-foter-menu .foter-col2 li, body footer .Dekstop-foter-menu .foter-col3 li, body footer .Dekstop-foter-menu .foter-col4 li {
+          width: auto;
+          height: 30px; }
+          body footer .Dekstop-foter-menu .foter-col2 li a, body footer .Dekstop-foter-menu .foter-col3 li a, body footer .Dekstop-foter-menu .foter-col4 li a {
+            height: 30px;
+            width: auto;
+            height: 30px;
+            color: white;
+            text-decoration: none;
+            cursor: pointer; }
+      body footer .Dekstop-foter-menu .foter-col3 .foter-col-3 {
+        list-style-type: none;
+        text-align: left;
+        padding-top: 40px;
+        padding-left: 0px;
+        padding-right: auto;
+        padding-bottom: auto; }
+      @media screen and (max-width: 750px) {
+        body footer .Dekstop-foter-menu {
+          visibility: hidden;
+          width: auto;
+          height: 0px; } }
+    body footer .Mobile-foter-menu {
+      width: 90%;
+      height: auto;
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto auto;
+      grid-template-rows: 80px;
+      padding-top: 0px;
+      padding-left: 8%;
+      padding-right: 0px;
+      padding-bottom: 0px; }
+      body footer .Mobile-foter-menu div {
+        padding-top: 30px;
+        padding-left: auto;
+        padding-right: auto;
+        padding-bottom: auto; }
+      body footer .Mobile-foter-menu a {
+        font-size: 18px;
+        font-weight: bold;
+        width: auto;
+        height: 30px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer; }
+      @media screen and (min-width: 751px) {
+        body footer .Mobile-foter-menu {
+          visibility: hidden;
+          width: auto;
+          height: 0px; } }
+    body footer .foter-copyright {
+      text-align: center;
+      background-color: green;
+      border-top: 1px solid lightgray;
+      font-size: 10px;
+      color: lightgray;
+      padding-top: 15px;
+      padding-left: auto;
+      padding-right: auto;
+      padding-bottom: auto;
+      width: auto;
+      height: 50px; }
+
+/*# sourceMappingURL=TableSearchStyle.css.map */

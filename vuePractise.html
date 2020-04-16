@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Practise </title>
+    <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/CSS/VuePractiseStyle.css">
+</head>
+<body>
+	<div id="Socks" class="Socks">
+
+		<p class="cart">Cart {{cart}}</p>
+
+		<product @add-to-cart="updatecart"></product>
+
+	</div>
+    
+    <script src="assets/JS/vue.js"></script>
+    <script src="assets/JS/VuePractise.js"></script>
+</body>
+</html>

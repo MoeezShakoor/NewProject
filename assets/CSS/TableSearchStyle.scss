@@ -1,0 +1,435 @@
+// Variables
+$text-color: black;
+$button-color1:green;
+$button-color2:white;
+$borderColor:lightgray;
+
+// maxins
+@mixin pading($top,$right,$bottom,$left) {
+    padding-top: $top;
+    padding-left: $left;
+    padding-right: $right;
+    padding-bottom: $bottom;
+}
+@mixin mrgin($top,$right,$bottom,$left) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-left: $left;
+    margin-right: $right;
+}
+@mixin size($wid, $hei) {
+    width: $wid;
+    height: $hei;
+}
+@mixin button-yes() {
+    background-color: $button-color1;
+        color: $button-color2;
+        font-size: 20px;
+         @include mrgin(25px,10px,0px,0px);
+        @include size(110px,40px);
+}
+@mixin button-no() {
+    background-color: $button-color2;
+    color: $button-color1;
+    font-size: 20px;
+    @include mrgin(25px,10px,0px,0px);
+    @include size(110px,40px);
+}
+
+
+
+body{
+    background-color: rgb(231, 231, 231);
+    color: $text-color;
+		position: relative; 
+		span.navbar-arrow{
+			position: absolute;
+    color: white;
+    background-color: green;
+    padding-left: 11px;
+    padding-top: 7px;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    left: 10px;
+		top: 20px;
+		visibility: hidden;
+		@media screen and (max-width:1150px){
+			visibility: visible;
+		}
+		@media screen and (min-width:1150px){
+			visibility: hidden;
+		}
+		}
+
+		.confirmation{
+			visibility: hidden;
+			position: absolute;
+			background-color: rgba(139, 139, 139, 0.6);
+			height: 340px;
+			width: 100%;
+			padding-top: 4%;
+			.confirmBoxCross{
+				background-color: rgb(236, 244, 248);
+				width: 430px;
+				height: 30px;
+				border-radius: 5px 5px 0px 0px;
+				//box-shadow: 10px 10px 10px gray;
+				border: 1px solid green;
+				font-size: 17px;
+				border-bottom:  none;
+				@include mrgin(auto,auto ,auto ,36% );
+				i{
+					float: right;
+					@include pading(6px,9px ,0px ,0px );
+				}
+				@media screen and (max-width:1100px){
+					@include mrgin(auto,auto ,auto ,24% );
+				}
+				@media screen and (max-width:600px){
+					@include mrgin(auto,auto ,auto ,13% );
+				}
+			}
+			.confirmBox{
+					background-color: rgb(255, 253, 253);
+					width: 430px;
+					height: 140px;
+					border-radius: 0px 0px 5px 5px ;
+					box-shadow: 10px 10px 10px gray;
+					border: 1px solid green;
+					font-size: 17px;
+					border-top:  1px solid rgb(224, 221, 221);
+					@include pading(15px,auto ,auto ,16px );
+					@include mrgin(auto,auto ,auto ,36% );
+					.del-button{
+							@include button-yes();
+							@include mrgin(25px,10px,0px,150px);
+					}
+					.no-button{
+							@include button-no();
+					}
+					@media screen and (max-width:1100px){
+						@include mrgin(auto,auto ,auto ,24% );
+					}
+					@media screen and (max-width:600px){
+						@include mrgin(auto,auto ,auto ,13% );
+					}
+			}
+			@media screen and (max-width:600px){
+				height: 260px;
+			}
+		}
+		.Container{
+			display: flex;
+			.nav-left{
+				background-color: white;
+				box-shadow: 10px 10px 10px darkgray;
+				border-radius: 5px;
+				display: inline-block;
+				width: 22%;
+				@include mrgin(10px,5px ,10px ,5px );
+				.profile-pic-block{
+						position: relative;
+						div{
+								position: absolute;
+								left: 195px;
+								top: 30px;
+								@media screen and (max-width:1140px){
+									left:298px;
+								}
+								@media screen and (min-width:1500px){
+									left:218px;
+								}
+						}
+						img{
+								height: 110px;
+								width: 110px;
+								border-radius: 60px;
+								left: 90px;
+								top: 30px;
+								position: absolute;
+								@media screen and (max-width:1140px){
+									left:200px;
+								}
+								@media screen and (min-width:1500px){
+									left:120px;
+								}
+						}
+						span{
+								position: absolute;
+								color: white;
+								background-color: green;
+								padding-left: 2px;
+								border-radius: 50%;
+								height: 18px;
+								width: 18px;
+								left: 186px;
+								top: 115px;
+								@media screen and (max-width:1140px){
+									left:296px;
+								}
+								@media screen and (min-width:1500px){
+									left:216px;
+								}
+						}
+				}
+				.left-nav-user-name{
+						padding-top: 155px;
+						font-weight: bold;
+						color: black;
+						text-align: center;
+						font-size: 16px;
+						.left-nav-user-description{
+								font-size: 12px;
+								font-family: initial;
+								color: gray;
+								text-align: center;
+						}
+						}
+						.left-nav-progress-bar-grid{
+						.left-nav-bar-background{
+							width: 85%;
+							height: 5px;
+							background-color: lightgray;
+							margin-top: 18px;
+							margin-left: 8%;
+							border-radius: 10px; 
+							.left-nav-bar-front{
+							width: 60%;
+							height: 5px;
+							background-color: green;  
+							border-radius: 10px;  
+							@include mrgin(0px,0px,0px,0px );
+							}
+						}
+						.left-nav-profile-comp-percentage{
+							color: green;
+							font-weight: bold;
+							@include mrgin(10px,0px,0px,8% );
+						}
+						}
+					.left-nav-profile-comp-status{
+						@include mrgin(0px,0px,10px,9% );
+					}
+
+					div{
+						.left-nav-menu-list{
+						padding-left: 0;
+						list-style-type: none;
+						li{
+							width: inherit;
+							text-align: left;
+							height: 50px;
+							padding-left: 11%;
+							padding-top: 5%;
+							font-size: 18px;
+							border-bottom: 1px solid rgb(184, 181, 181);
+							a{
+							color: rgb(100, 100, 100);
+							text-decoration: none;
+							cursor: pointer;
+							}
+							}
+						.left-nav-menu-list-nmbr8{     
+							background-color: lightgray;
+							.item8 {
+								color: green; 
+								text-decoration: none;
+							}
+						}
+					}
+					}
+					@media screen and (max-width:1150px){
+						visibility: hidden;
+						@include size(0px,0px );
+					}
+			}
+			
+			
+							
+			.innerContainer{
+				display: inline-block;
+				width: 74%;
+				background-color: white;
+				box-shadow: 10px 10px 10px darkgray;
+				border-radius: 5px;
+				@include pading(0px,10px ,0px ,0px );
+				@include mrgin(10px,5px ,10px ,5px );
+				h2{
+					@include mrgin(15px,0px,10px,0px);
+					@include pading(10px,0px,0px,0px);
+				}
+				form{
+					@include pading(0px,10px,20px,25px);
+
+					label{
+							@include mrgin(15px,0px,0px,0px);
+					}
+					span{
+							display: inline-block;
+							//width: 23%;
+							@include size(24%,auto);
+							@include pading(0px,10px,0px,0px);
+
+							@media (max-width: 900px)
+									{
+											@include size(49%,auto); 
+									}
+								@media (max-width: 575px)
+									{
+											@include size(100%,auto);  
+									}
+					}
+					select{
+							@include size(96%,40px);
+							border: 1px solid rgb(13, 151, 13);
+							border-radius: 4px;
+							@include mrgin(6px,0px,0px,0px);
+					}
+					input{
+							@extend select;
+					}
+					.submit-button{
+							background-color: $button-color1;
+							color: $button-color2;
+							font-size: 20px;
+							@include mrgin(25px,10px,0px,0px);
+							@include size(110px,40px);
+					}
+					.reset-button{
+							@extend .submit-button;
+							background-color: $button-color2;
+							color: $button-color1;
+					}
+				}
+				div{
+					@include size(96%,auto);
+					@include mrgin(auto,auto,auto,auto);
+					overflow: auto;
+					table{
+							border: 1px solid $borderColor;
+							@include size(100%,auto);
+							font-size: 16px;
+							th{
+									@include pading(auto,auto,auto,15px);
+									@include size(auto,auto);
+									border: 1px solid $borderColor;
+							}
+							tr{
+									@include pading(auto,auto,auto,15px);
+									@include size(auto,50px);
+									border: 1px solid $borderColor;
+							
+									td{
+											@include pading(auto,auto,auto,15px);
+											border: 1px solid $borderColor;
+											@include size(auto,auto);
+											.icons{
+													display: inline-block;
+													width: 30px;
+													height: 30px;
+													background: rgb(247, 241, 232);
+													padding-left: 8px;
+													padding-top: 5px;
+													border-radius: 50%;
+													margin-right: 7%;
+											}
+									}
+							}
+					}   
+									
+				}
+				@media screen and (max-width:1150px){
+					@include mrgin(10px,auto ,10px ,44px );
+					width: 88%;
+
+			}
+
+			}
+		}	
+    footer{
+        background-color: $button-color1;
+        .Dekstop-foter-menu{
+            @include size(80%,auto );
+            @include mrgin(20px,auto,0px,auto);
+            display:grid;
+            grid-template-columns: 40% 20% 20% 20%;
+            grid-template-rows: 300px;
+            .foter-col1{
+                color:$button-color2;
+                text-align: left;
+                @include pading(50px,auto,auto,10%);
+            }
+            .foter-col2{
+                @extend .foter-col1;
+                @include pading(50px,auto,auto,15%);
+                ul{
+                    list-style-type: none;
+                    @include pading(auto,auto,auto,0px);
+				}
+				li{
+                    @include size(auto,30px ); 
+                    a{    
+                        height: 30px;
+                        @include size(auto,30px );
+                        color: $button-color2;
+                        text-decoration: none ;
+                        cursor: pointer;
+                    }
+				}
+			}
+            .foter-col3{
+                @extend .foter-col2;
+                .foter-col-3{
+                    list-style-type: none;
+                    text-align: left;
+                    @include pading(40px,auto,auto,0px);
+                }
+            }  
+            .foter-col4{
+                @extend .foter-col2;
+            } 
+            @media screen and (max-width:750px){
+                visibility: hidden;
+                @include size(auto,0px )
+            }
+            
+		}
+	
+
+
+        .Mobile-foter-menu{
+            @include size(90%,auto );
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto;
+						grid-template-rows: 80px;
+						@include pading(0px,0px,0px,8% );
+						div{
+							@include pading(30px,auto ,auto ,auto );
+
+						}
+            a{    
+                font-size: 18px;
+                font-weight: bold;
+                @include size(auto,30px );
+                color: $button-color2;
+                text-decoration: none ;
+                cursor: pointer;
+            }
+            @media screen and (min-width:751px){
+                visibility: hidden;
+                @include size(auto,0px )
+            }
+        }
+        .foter-copyright{
+            text-align: center;
+            background-color: $button-color1;
+            border-top: 1px solid $borderColor;
+            font-size: 10px;
+            color: $borderColor;
+            @include pading(15px,auto,auto,auto);
+            @include size(auto,50px );
+        }
+    }
+
+}

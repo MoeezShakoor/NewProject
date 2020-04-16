@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/CSS/project1.css">
+  <link href="https://fonts.googleapis.com/css?family=Viaoda+Libre&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 class="heading">Survey Form</h1>
+  <div class="box text">
+    Surveys are the perfect way to gauge customer, employee, or even just public opinion about your brand. Get started
+    the easy way: select a free online survey template from JotForm. We have all the survey and reporting tools to find
+    and collect helpful data. It's perfect when you need to understand customer demographics, or when you need to
+    conduct a market research survey. Select from one of our pre-made sample survey forms or start your own basic survey
+    form. Once you have selected a survey template, use the JotForm builder to design, format and customize your survey
+    form. Try one of our free online survey form templates today!
+  </div>
+
+  <form>
+    <table id="table1"> 
+      <tr>
+        <td class="tablec1"> <label>Full Name</label> </td>
+        <td class="tablec2"><input class="inputTxtBack" type="text" placeholder="Enter Full Name" required></td>
+      </tr>
+      <tr>
+        <td class="tablec1"><label>Age</label></td>
+        <td class="tablec2"><input class="inputTxtBack" type="text" placeholder="Enter Age"></td>
+      </tr>
+      <tr>
+        <td class="tablec1"><label>Contact</label></td>
+        <td class="tablec2"><input class="inputTxtBack" type="tel" placeholder="Enter Contact number" required></td>
+      </tr>
+      <tr>
+        <td class="tablec1"><label>Email</label></td>
+        <td class="tablec2"><input class="inputTxtBack" type="email" placeholder="Enter Email Address" required></td>
+      </tr>
+      <br>
+      <tr>
+        <td class="tablec1"><label>Your Staus</label></td>
+        <td class="tablec2"><input class="inputTxtBack" list="status">
+          <datalist id="status">
+            <option>Student</option>
+            <option>Employed</option>
+            <option>Self-Employed</option>
+            <option>Employer</option>
+            <option>Un-Employed</option>
+          </datalist>
+          </input>
+        </td>
+      </tr>
+    </table>
+    <table id="table2">
+      <tr>
+        <td class="tablec1"><label>Would you recommend Web dev to others? </label></td>
+        <td><input class="inputTxtBack" type="radio" id="Yes" name="gender" value="male">
+          <label for="Yes">Yes</label><br>
+          <input type="radio" id="No" name="gender" value="female">
+          <label for="No">No</label><br>
+          <input type="radio" id="may_be" name="gender" value="other">
+          <label for="may_be">May be</label></td>
+      </tr>
+    </table>
+    <div class="center">
+      <input type="submit" value="Submit">
+      <input type="reset">
+    </div>
+  </form>
+</body>
+
+</html>

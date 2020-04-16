@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+
+.container1{
+    padding: 10px;
+    width: 28%;
+}
+.container2{
+    padding: 10px;
+    width: 68%;
+    column-count: 2;
+}
+img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+@media (max-width: 850px) {
+    .container{
+        column-count: 3;
+    }
+}
+@media (max-width: 575px) {
+    .container{
+        column-count: 2;
+    }
+} 
