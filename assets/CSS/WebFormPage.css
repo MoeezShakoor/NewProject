@@ -29,6 +29,10 @@ header{
 .logo{
     height: 70px;
 }
+i{
+    color: darkgray;
+    cursor: pointer;
+}
 .head-col2{
     text-align: left;
     padding-top: 20px;
@@ -143,11 +147,11 @@ i.dropdown{
     margin-right: 10px;
     padding: 0px 0px 0px 0px;
 }
+
 .heading{
     background-color: rgb(226, 226, 226);
     font-size: 22px;
     font-weight: bold;
-    margin-top: 12px;
 }
 .heading span{
     font-size: 14px;
@@ -160,7 +164,39 @@ i.dropdown{
     padding-bottom: 10px;
     font-size: 20px;
 }
-.heading2 span{
+.heading2 i.User{
+    visibility: hidden;
+    width: 0px;
+}
+
+.heading2 i.right{
+    visibility: hidden;
+}
+.heading2 i.down{
+    visibility: visible;
+    position: relative;
+}
+.heading2 .accessTypeMenu{
+    visibility: hidden;
+    position: absolute;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    left: 190px;
+    top: 83px;
+    background-color: rgb(247, 247, 247);
+}
+.accessTypeMenu span{
+    display: block;
+    border: 1px solid gray;
+    height: 40px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: darkgray;
+    font-weight: bold;
+    cursor: pointer;
+}
+.heading2 span.alphabet{
     display: inline-block;
     background-color: rgb(204, 204, 204);
     width: 40px;
@@ -171,6 +207,19 @@ i.dropdown{
     color: white;
     font-weight: bold;
     margin-right: 13px;
+}
+.heading2 span.type{
+    display: inline-block;
+    background-color: inherit;
+    width: auto;
+    height: auto;
+    border-radius: 0px;
+    text-align: center;
+    padding-top: 0px;
+    color: rgb(155, 155, 155);
+    font-weight: bold;
+    margin-right: 0px;
+
 }
 .heading2 i.fas fa-users{
     color: green;
@@ -197,6 +246,25 @@ form input{
 }
 form input.file{
   width: 28%;
+  visibility: hidden;
+}
+form .fileupload{
+    text-align: center;
+    display: inline-block;
+    background-color: green;
+    color: white;
+    /* padding: 5px;
+    padding-top: 10px; */
+    width: 105px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding-right: 0px;
+}
+form .fileupload label{
+    margin: 5px;
+    margin-top: 5px;
+    cursor: pointer;
 }
 form input.submit-button{
     background-color: green;
@@ -243,7 +311,7 @@ form div{
     padding-top: 14px;
     color: green;
     font-size: 25px;
-    margin-top: 12px;
+    border-radius: 5px 5px 0px 0px
 }
 .nav-right-heading2{
     background-color: rgb(214, 221, 207);
@@ -327,35 +395,88 @@ div.nav-right-options{
 
 
 
-.foter-menu{
-    background-color: green;
-    min-height: 350px;
+body footer {
+    background-color: green; 
 }
-.foter-menu div{
+.Dekstop-foter-menu {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    grid-template-rows: 300px; 
+}
+.Dekstop-foter-menu .foter-col1, body footer .Dekstop-foter-menu .foter-col2, body footer .Dekstop-foter-menu .foter-col3, body footer .Dekstop-foter-menu .foter-col4 {
     color: white;
     text-align: left;
-    padding-left: 10%;
     padding-top: 50px;
+    padding-left: 10%;
+    padding-right: auto;
+    padding-bottom: auto; 
 }
-.foter-menu ul{
+.Dekstop-foter-menu .foter-col2, body footer .Dekstop-foter-menu .foter-col3, body footer .Dekstop-foter-menu .foter-col4 {
+    padding-top: 50px;
+    padding-left: 15%;
+    padding-right: auto;
+    padding-bottom: auto; 
+}
+.Dekstop-foter-menu .foter-col2 ul, body footer .Dekstop-foter-menu .foter-col3 ul, body footer .Dekstop-foter-menu .foter-col4 ul {
     list-style-type: none;
+    padding-top: auto;
     padding-left: 0px;
+    padding-right: auto;
+    padding-bottom: auto;
 }
-.foter-menu li{    
-    height: 30px;   
+.Dekstop-foter-menu .foter-col2 li, body footer .Dekstop-foter-menu .foter-col3 li, body footer .Dekstop-foter-menu .foter-col4 li {
+    width: auto;
+    height: 30px; 
 }
-.foter-menu li a{    
-     height: 30px;
-     color: rgb(255, 255, 255);
-     text-decoration: none ;
-     cursor: pointer;
- }
- .foter-menu div.foter-col-3{
+.Dekstop-foter-menu .foter-col2 li a, body footer .Dekstop-foter-menu .foter-col3 li a, body footer .Dekstop-foter-menu .foter-col4 li a {
+    height: 30px;
+    width: auto;
+    height: 30px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer; 
+}
+.Dekstop-foter-menu .foter-col3 .foter-col-3 {
     list-style-type: none;
     text-align: left;
-    padding-left: 0px;
     padding-top: 40px;
+    padding-left: 0px;
+    padding-right: auto;
+    padding-bottom: auto;
 }
+.Mobile-foter-menu {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 80px;
+    padding-top: 0px;
+    padding-left: 8%;
+    padding-right: 0px;
+    padding-bottom: 0px; 
+}
+.Mobile-foter-menu div {
+    padding-top: 30px;
+    padding-left: auto;
+    padding-right: auto;
+    padding-bottom: auto; 
+}
+.Mobile-foter-menu a {
+    font-size: 18px;
+    font-weight: bold;
+    width: auto;
+    height: 30px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer; 
+}
+    
 .foter-copyright{
     text-align: center;
     background-color: green;
@@ -366,6 +487,20 @@ div.nav-right-options{
     height: 50px;
 }
 
+@media screen and (min-width: 751px) {
+    .Mobile-foter-menu {
+        visibility: hidden;
+        width: auto;
+        height: 0px; 
+    }
+}
+@media screen and (max-width: 750px) {
+    .Dekstop-foter-menu {
+        visibility: hidden;
+        width: auto;
+        height: 0px;
+    }
+}
 @media screen and (max-width: 1200px) {
     .body-col1{
         min-height: 100px;

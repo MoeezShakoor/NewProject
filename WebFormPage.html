@@ -70,12 +70,21 @@
 							/ Admin-2
 						</span>
 					</div>
+
 					<div class="heading2">
-						<span>H</span>
-						<i class="fas fa-users"></i>
-						Public
-						<i class="fa fa-caret-down dropdown"></i>
+						<span class="alphabet">H</span>
+						<i id="Users" class="fas fa-users Users"></i>
+						<i id="User" class="fas fa-user User"></i>
+						<span id="AccessType" class="type">Public</span>
+						<i id="AccessTypeDropdownC" class="fa fa-caret-down down" onclick="AccessTypeMenuClosed()"></i>
+						<i id="AccessTypeDropdownO" class="fas fa-caret-right right" onclick="AccessTypeMenuOpened()"></i>
+						<div id="AccessTypeMenu" class="accessTypeMenu">
+							<span onclick="clickedPublic()">Public</span>
+							<span onclick="clickedPrivate()">Private</span>
+						</div>
+						
 					</div>
+
 					<form>
 						<label for="dep">Department</label><br>
 						<select id="dep">
@@ -106,8 +115,12 @@
 						<textarea id="description" rows="10" name="comment" maxlength="80">Enter text here...</textarea>
 						<div>400 character max</div>
 
-						<label for="myfile">Upload File</label><br>
+						<div class="fileupload">
+							<label for="myfile" >Upload File</label><br>
+						</div>
 						<input type="file" id="myfile" class="file">
+
+
 						<input type="submit" value="Submit" class="submit-button">
 					</form>
 				</div>
@@ -242,16 +255,17 @@
 
 
 
-    <footer >
-		<div class="row foter-menu">
-			<div class="col-lg-4 ">
-				<h2>Nuton</h2>
-				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-					Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
-					 sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-				</p>
-			</div>
-			<div class="col-lg-2 ">
+	<footer >
+		<div class="Dekstop-foter-menu">
+			<div class="foter-col1">
+				
+					<h2>Nuton</h2>
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+						Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+						sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+					</p>
+			</div>  
+			<div class="foter-col2"> 
 				<h4>Sitemap</h4>
 				<ul>
 					<li>
@@ -272,7 +286,7 @@
 					
 				</ul>
 			</div>
-			<div class="col-lg-2 ">
+			<div class="foter-col3">
 				<div class="foter-col-3">
 					<ul >
 						<li>
@@ -293,7 +307,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-2 ">
+			<div class="foter-col4">
 				<h4>Support</h4>
 				<ul>
 					<li>
@@ -311,17 +325,39 @@
 					<li>
 						<a>Documentation</a>
 					</li>
-					
 				</ul>
 			</div>
-			
 		</div>
 
-
+		<div class="Mobile-foter-menu">
+			<div>
+				<a>About us</a>
+			</div>
+			<div>
+				<a>Blog</a>
+			</div>
+			<div>
+				<a>Support</a>
+			</div>
+			<div>
+				<a>FAQs</a>
+			</div>
+			<div>
+				<a>Privacy</a>
+			</div>
+			<div>
+				<a>Policy</a>
+			</div>
+			<div>
+				<a>Contact</a>
+			</div>
+		</div>
+		 
 		<div class="foter-copyright">
 			copyrights
 		</div>
 	</footer>
-    
+
+	<script src="assets/JS/webFormPage.js"></script>
 </body>
 </html>
