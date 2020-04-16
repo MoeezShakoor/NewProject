@@ -22,6 +22,7 @@ Vue.component('product',{
 					</div>
 
 					<button v-on:click="addToCart">Add to cart</button>
+					<button class="delbutton"  v-on:click="delFromCart">Delete</button>
 					
 				</div>
 			</div>
@@ -75,6 +76,9 @@ Vue.component('product',{
 		},
 		addToCart(){
 			this.$emit('add-to-cart')
+		},
+		delFromCart(){
+			this.$emit('del-from-cart')
 		},
 		addReview(productreview){
 			this.reviews.push(productreview)
@@ -143,6 +147,11 @@ var Socks = new Vue({
 	methods:{
 		updatecart(){
 			this.cart +=1
+		},
+		delFromCart(){
+			if(this.cart>0){
+			this.cart -=1
+			}
 		}
 	}
 })

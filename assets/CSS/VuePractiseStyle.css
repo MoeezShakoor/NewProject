@@ -26,11 +26,14 @@ body .Socks .gridbox {
     height: 40px;
     margin-bottom: 15px; }
   body .Socks .gridbox div button {
-    width: 150px;
-    height: 80px;
     font-size: 20px;
+    width: 130px;
+    height: 50px;
+    border-radius: 6px;
     color: black;
     background-color: cadetblue; }
+  body .Socks .gridbox div .delbutton {
+    background-color: grey; }
 body .Socks .cart {
   float: right;
   border: 1px solid gray;

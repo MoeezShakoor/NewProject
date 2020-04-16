@@ -39,10 +39,14 @@ body{
 			
 			div{
 				button{
-					@include size(150px,80px);
 					font-size: 20px;
+					@include size(130px,50px);
+					border-radius: 6px;
 					color: black;
 					background-color: cadetblue;
+				}
+				.delbutton{
+					background-color: grey;
 				}
 			}
 		}
