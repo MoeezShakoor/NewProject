@@ -46,6 +46,10 @@ function DEL(){
     ConfirmBox.style.visibility= "visible";
 
 }
+function closeDeletePopUp(){
+   var ConfirmBox= document.getElementById("Confirmation");
+    ConfirmBox.style.visibility= "hidden";
+}
 function Del_Confirm_Yes(){
       var ConfirmBox= document.getElementById("Confirmation");
       ConfirmBox.style.visibility= "hidden";
