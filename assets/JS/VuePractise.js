@@ -3,7 +3,7 @@ Vue.component('product',{
 		<div>
 			<div class="gridbox">	
 				<div>
-					<img :src="image" class="sockImage">
+					<img :src="variants[selectedIndex].variantImage" class="sockImage">
 				</div>
 				<div class="grid-2">
 					<h2>{{itemName}}</h2>
